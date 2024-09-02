@@ -21,6 +21,7 @@ header {
     text-align: left;
     margin-bottom: 40px;
     max-width: 1200px; /* Ensure the header aligns with grid width */
+    padding-left: 0; /* Remove default padding */
 }
 
 header h1 {
@@ -70,7 +71,7 @@ header h1 {
     object-fit: cover; /* Cover to fill the container */
 }
 
-/* Overlay Style for Text */
+/* Overlay Style for Alt Text */
 .overlay {
     position: absolute;
     bottom: 10px;
@@ -82,6 +83,7 @@ header h1 {
     padding: 10px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    font-size: 16px; /* Font size for overlay text */
 }
 
 /* Show overlay on hover */
@@ -106,14 +108,14 @@ header h1 {
 }
 
 .grid-item.contact p {
-    font-size: 20px; /* Larger font size */
+    font-size: 24px; /* Larger font size */
     margin-bottom: 5px; /* Space between lines */
 }
 
 .grid-item.contact a {
     color: #007bff;
     text-decoration: none;
-    font-size: 18px; /* Slightly larger font size for email */
+    font-size: 20px; /* Slightly larger font size for email */
 }
 
 .grid-item.contact a:hover {
