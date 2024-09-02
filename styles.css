@@ -16,26 +16,7 @@ body {
     min-height: 100vh; /* Full viewport height */
 }
 
-/* Header Style */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    max-width: 1200px;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-header h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.2;
-    position: relative;
-    left: -50px; /* Negative value to move it slightly left */
-}
-
+/* General styles */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -44,6 +25,28 @@ header h1 {
     margin: 0 auto;
     padding-top: 60px; /* Add padding to account for the new header height */
 }
+
+/* Header style */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    position: relative;
+    z-index: 100; /* Ensure header appears above grid content */
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    position: absolute;
+    left: calc(-50% + 20px); /* Adjusted calculation to align with grid items */
+    transform: translateX(calc(50% + 20px)); /* Additional translation for precise alignment */
+}
+
 
 .grid-item {
     position: relative;
