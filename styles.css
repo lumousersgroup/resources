@@ -18,30 +18,33 @@ body {
 
 /* Header Style */
 header {
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
-    max-width: 1200px; /* Ensure the header aligns with grid width */
-    padding-left: 0; /* Remove default padding */
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 header h1 {
     font-size: 36px;
-    font-weight: 700; /* Bold weight */
+    font-weight: 700;
     margin-bottom: 10px;
-    line-height: 1.2; /* Adjust line height */
+    line-height: 1.2;
     position: relative;
+    left: -50px; /* Negative value to move it slightly left */
 }
 
-/* Grid Container */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 60px; /* Add padding to account for the new header height */
 }
 
-/* Grid Item Style */
 .grid-item {
     position: relative;
     overflow: hidden;
@@ -52,7 +55,7 @@ header h1 {
     align-items: center;
     justify-content: center;
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
 }
 
