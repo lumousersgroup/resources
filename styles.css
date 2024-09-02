@@ -21,28 +21,25 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px; /* Increase gap for more spacing */
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 20px; /* Reduced padding */
-    flex-grow: 1; /* Allow grid to grow and push footer down */
+    padding-top: 20px;
+    flex-grow: 1;
 }
 
 /* Header style */
 header {
-    display: grid; /* Make header a grid */
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    max-width: 1200px; /* Align with grid-container */
-    margin: 0 auto 20px auto; /* Center horizontally */
-    padding-left: 10px; /* Align header with grid */
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
     width: 100%;
+    padding: 0 10px; /* Add padding to align with grid content */
 }
 
 header h1 {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.2;
-    grid-column: 1 / 2; /* Align to the first column */
 }
 
 /* Grid item style */
@@ -57,7 +54,7 @@ header h1 {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-    height: 100%; /* Full height */
+    height: 100%;
 }
 
 /* Floating Effect on Hover */
@@ -69,11 +66,11 @@ header h1 {
 .grid-item img {
     width: 100%;
     height: auto;
-    max-height: 100%; /* Allow images to fill more of the grid */
+    max-height: 100%;
     display: block;
     transition: transform 0.3s ease;
-    object-fit: cover; /* Maintain square-like appearance */
-    aspect-ratio: 1 / 1; /* Force images to be square */
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
 }
 
 /* Overlay Style for Alt Text */
@@ -83,14 +80,14 @@ header h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-    color: #333333; /* Dark grey text */
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333333;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 24px; /* Larger font size */
+    font-size: 24px;
     text-align: center;
     padding: 10px;
 }
@@ -138,7 +135,7 @@ footer {
     padding: 10px;
     font-size: 12px;
     color: #999;
-    margin-top: 40px; /* Add space above the footer */
+    margin-top: 40px;
 }
 
 /* Footer Link Style */
@@ -162,14 +159,12 @@ footer a:hover {
     }
 
     header {
-        grid-template-columns: 1fr; /* Make header one column on small screens */
-        padding-left: 0; /* Remove padding on smaller screens */
+        padding: 0; /* Remove padding on smaller screens */
     }
 
     header h1 {
         font-size: 28px;
-        grid-column: 1 / -1; /* Center on small screens */
-        text-align: center; /* Center align text */
+        text-align: center;
     }
 
     header p {
