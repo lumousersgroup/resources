@@ -21,7 +21,7 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 40px; /* Increase gap for more spacing */
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px; /* Reduced padding */
@@ -30,26 +30,22 @@ body {
 
 /* Header style */
 header {
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: center;
-    margin-bottom: 40px;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    margin: 0 auto 20px auto; /* Center and space below header */
+    padding: 0 10px; /* Align header with grid */
 }
 
 header h1 {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.2;
+    margin-left: 0; /* Align with the grid's left edge */
 }
 
+/* Grid item style */
 .grid-item {
     position: relative;
     overflow: hidden;
-    padding: 10px;
     background-color: #f8f8f8;
     display: flex;
     flex-direction: column;
@@ -58,6 +54,7 @@ header h1 {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+    height: 100%; /* Full height */
 }
 
 /* Floating Effect on Hover */
@@ -69,10 +66,11 @@ header h1 {
 .grid-item img {
     width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 100%; /* Allow images to fill more of the grid */
     display: block;
     transition: transform 0.3s ease;
-    object-fit: cover;
+    object-fit: cover; /* Maintain square-like appearance */
+    aspect-ratio: 1 / 1; /* Force images to be square */
 }
 
 /* Overlay Style for Alt Text */
