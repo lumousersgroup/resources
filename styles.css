@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Style */
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+    max-width: 1200px; /* Container width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Grid Item Style */
+.grid-item {
+    position: relative; /* For hover effect */
+    overflow: hidden; /* Crop overflowing content */
+    padding: 10px;
+    background-color: #f8f8f8; /* Background color for images */
+    border: 1px solid #ddd; /* Border for grid items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item img {
+    width: 100%; /* Make images fill the grid item */
+    display: block; /* Remove extra space below images */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    max-height: 200px; /* Max height to control size */
+    object-fit: cover; /* Crop images neatly */
+}
+
+.grid-item h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333333;
+}
+
+/* Hover Effect */
+.grid-item:hover img {
+    transform: scale(1.05); /* Zoom in on hover */
+}
+
+/* Link Style */
+.grid-item a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+/* Contact Us Section */
+.grid-item.contact {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+}
+
+.grid-item.contact h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.grid-item.contact p {
+    font-size: 18px;
+}
+
+.grid-item.contact a {
+    color: #007bff; /* Email link color */
+    text-decoration: none;
+}
+
+.grid-item.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design: Mobile Layout */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* One column */
+    }
+    
+    .grid-item img {
+        max-height: 300px; /* Increase max height for better view */
+    }
+
+    header h1 {
+        font-size: 28px; /* Adjust header font size for smaller screens */
+    }
+
+    header p {
+        font-size: 16px; /* Adjust header paragraph size for smaller screens */
+    }
+}
