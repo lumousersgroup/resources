@@ -11,7 +11,7 @@ body {
     background-color: #ffffff;
     color: #333333;
     padding: 20px;
-    margin-bottom: 60px; /* Ensure space for footer */
+    margin-bottom: 80px; /* Increase space for footer */
     position: relative; /* For absolute positioning of footer */
     min-height: 100vh; /* Full viewport height */
 }
@@ -20,6 +20,7 @@ body {
 header {
     text-align: left;
     margin-bottom: 40px;
+    max-width: 1200px; /* Ensure the header aligns with grid width */
 }
 
 header h1 {
@@ -62,10 +63,11 @@ header h1 {
 /* Image Style */
 .grid-item img {
     width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Make images taller */
     display: block;
     transition: transform 0.3s ease;
-    max-height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Cover to fill the container */
 }
 
 /* Overlay Style for Text */
@@ -104,12 +106,14 @@ header h1 {
 }
 
 .grid-item.contact p {
-    font-size: 18px;
+    font-size: 20px; /* Larger font size */
+    margin-bottom: 5px; /* Space between lines */
 }
 
 .grid-item.contact a {
     color: #007bff;
     text-decoration: none;
+    font-size: 18px; /* Slightly larger font size for email */
 }
 
 .grid-item.contact a:hover {
@@ -129,6 +133,7 @@ footer {
     color: #999; /* Fainter color */
 }
 
+/* Footer Link Style */
 footer a {
     color: #007bff;
     text-decoration: none;
@@ -145,7 +150,7 @@ footer a:hover {
     }
     
     .grid-item img {
-        max-height: 300px;
+        max-height: 400px; /* Allow more height on mobile */
     }
 
     header h1 {
