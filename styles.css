@@ -30,16 +30,19 @@ body {
 
 /* Header style */
 header {
-    max-width: 1200px;
-    margin: 0 auto 20px auto; /* Center and space below header */
-    padding: 0 10px; /* Align header with grid */
+    display: grid; /* Make header a grid */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    max-width: 1200px; /* Align with grid-container */
+    margin: 0 auto 20px auto; /* Center horizontally */
+    padding-left: 10px; /* Align header with grid */
+    width: 100%;
 }
 
 header h1 {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.2;
-    margin-left: 0; /* Align with the grid's left edge */
+    grid-column: 1 / 2; /* Align to the first column */
 }
 
 /* Grid item style */
@@ -158,8 +161,15 @@ footer a:hover {
         max-height: 400px;
     }
 
+    header {
+        grid-template-columns: 1fr; /* Make header one column on small screens */
+        padding-left: 0; /* Remove padding on smaller screens */
+    }
+
     header h1 {
         font-size: 28px;
+        grid-column: 1 / -1; /* Center on small screens */
+        text-align: center; /* Center align text */
     }
 
     header p {
