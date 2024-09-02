@@ -11,11 +11,11 @@ body {
     background-color: #ffffff;
     color: #333333;
     padding: 20px;
-    text-align: center;
 }
 
 /* Header Style */
 header {
+    text-align: left; /* Align text to the left */
     margin-bottom: 40px;
 }
 
@@ -45,11 +45,11 @@ header p {
     overflow: hidden; /* Crop overflowing content */
     padding: 10px;
     background-color: #f8f8f8; /* Background color for images */
-    border: 1px solid #ddd; /* Border for grid items */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: none; /* Remove border */
 }
 
 .grid-item img {
@@ -58,12 +58,6 @@ header p {
     transition: transform 0.3s ease; /* Smooth hover effect */
     max-height: 200px; /* Max height to control size */
     object-fit: cover; /* Crop images neatly */
-}
-
-.grid-item h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333333;
 }
 
 /* Hover Effect */
@@ -79,16 +73,11 @@ header p {
 
 /* Contact Us Section */
 .grid-item.contact {
-    background-color: #fff;
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    text-align: center;
-}
-
-.grid-item.contact h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove box shadow */
+    padding: 0; /* Remove padding */
+    text-align: center; /* Center the text */
 }
 
 .grid-item.contact p {
