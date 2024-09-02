@@ -50,8 +50,16 @@ header h1 {
     align-items: center;
     justify-content: center;
     border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Floating effect */
+    transition: box-shadow 0.3s ease;
 }
 
+/* Floating Effect on Hover */
+.grid-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Image Style */
 .grid-item img {
     width: 100%;
     display: block;
@@ -77,11 +85,6 @@ header h1 {
 /* Show overlay on hover */
 .grid-item:hover .overlay {
     opacity: 1;
-}
-
-/* Hover Effect */
-.grid-item:hover img {
-    transform: scale(1.05);
 }
 
 /* Link Style */
@@ -121,9 +124,9 @@ footer {
     right: 0;
     background-color: #f8f8f8;
     text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    color: #666;
+    padding: 5px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    color: #999; /* Fainter color */
 }
 
 footer a {
