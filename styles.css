@@ -7,13 +7,14 @@
 
 /* Body Style */
 body {
-    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     color: #333333;
     padding: 20px;
-    margin-bottom: 80px; /* Increase space for footer */
-    position: relative; /* For absolute positioning of footer */
-    min-height: 100vh; /* Full viewport height */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* General styles */
@@ -23,30 +24,27 @@ body {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 60px; /* Add padding to account for the new header height */
+    padding-top: 20px; /* Reduced padding */
+    flex-grow: 1; /* Allow grid to grow and push footer down */
 }
 
 /* Header style */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align to the left */
     align-items: center;
     margin-bottom: 40px;
     max-width: 1200px;
-    position: relative;
-    z-index: 100; /* Ensure header appears above grid content */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 header h1 {
     font-size: 36px;
     font-weight: 700;
-    margin-bottom: 10px;
     line-height: 1.2;
-    position: absolute;
-    left: calc(-50% + 20px); /* Adjusted calculation to align with grid items */
-    transform: translateX(calc(50% + 20px)); /* Additional translation for precise alignment */
 }
-
 
 .grid-item {
     position: relative;
@@ -64,32 +62,36 @@ header h1 {
 
 /* Floating Effect on Hover */
 .grid-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Image Style */
 .grid-item img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-height: 300px; /* Make images taller */
+    height: auto;
+    max-height: 300px;
     display: block;
     transition: transform 0.3s ease;
-    object-fit: cover; /* Cover to fill the container */
+    object-fit: cover;
 }
 
 /* Overlay Style for Alt Text */
 .overlay {
     position: absolute;
-    bottom: 10px;
+    top: 0;
     left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    color: #333333; /* Dark grey text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 16px; /* Font size for overlay text */
+    font-size: 24px; /* Larger font size */
+    text-align: center;
+    padding: 10px;
 }
 
 /* Show overlay on hover */
@@ -114,14 +116,14 @@ header h1 {
 }
 
 .grid-item.contact p {
-    font-size: 24px; /* Larger font size */
-    margin-bottom: 5px; /* Space between lines */
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .grid-item.contact a {
     color: #007bff;
     text-decoration: none;
-    font-size: 20px; /* Slightly larger font size for email */
+    font-size: 20px;
 }
 
 .grid-item.contact a:hover {
@@ -130,15 +132,12 @@ header h1 {
 
 /* Footer Style */
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background-color: #f8f8f8;
     text-align: center;
-    padding: 5px; /* Smaller padding */
-    font-size: 12px; /* Smaller font size */
-    color: #999; /* Fainter color */
+    padding: 10px;
+    font-size: 12px;
+    color: #999;
+    margin-top: 40px; /* Add space above the footer */
 }
 
 /* Footer Link Style */
@@ -158,7 +157,7 @@ footer a:hover {
     }
     
     .grid-item img {
-        max-height: 400px; /* Allow more height on mobile */
+        max-height: 400px;
     }
 
     header h1 {
